@@ -21,6 +21,8 @@ namespace ConsoleApplication1
             string OutputString = Reader.ReadLine();
             Reader.Close();
             Console.WriteLine(OutputString);
+
+            //comment
         }
     }
 }

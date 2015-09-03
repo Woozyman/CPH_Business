@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
+using System.Xml.Serialization;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Adressebog
 {
-    class Person
+    [Serializable()]
+    public class Person
     {
 
 
@@ -82,9 +86,47 @@ namespace Adressebog
             }
         }
 
+        public void SaveMe(Person p)
+        {
+            //Person p = new Person();
+            XmlSerializer ser = new XmlSerializer(typeof(Person));
+            LoadConfig(p, ser);
+        }
+
+       public void LoadConfig(Person p, XmlSerializer ser)
+        {
+            try
+            {
+                if (File.Exists(@"C:\Users\freyb\Documents\GitHubVisualStudio\CPH_Business\Adressebog\Adressebog\records.xml"))
+                {
+                    FileStream fs = new FileStream(@"C:\Users\freyb\Documents\GitHubVisualStudio\CPH_Business\Adressebog\Adressebog\records.xml", FileMode.Append);
+                    //p = (Person)ser.Deserialize(fs);
+                    TextWriter tw = new StreamWriter(fs);
+                    ser.Serialize(tw, p);
+                    tw.Close();
+                    fs.Close();
+
+                }
+                else
+                {
+                    Console.WriteLine("Could not find User Configuration File\n\nCreating new file...", "User Config Not Found");
+                    FileStream fs = new FileStream(@"C:\Users\freyb\Documents\GitHubVisualStudio\CPH_Business\Adressebog\Adressebog\records.xml", FileMode.CreateNew);
+                    TextWriter tw = new StreamWriter(fs);
+                    ser.Serialize(tw, p);
+                    tw.Close();
+                    fs.Close();
+                }
+               // setupControlsFromConfig();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
     }
 
-    enum PersonState
+   public enum PersonState
     {
         friend,
         enemy,
@@ -93,4 +135,6 @@ namespace Adressebog
         hungry,
         horny
     };
+
+   
 }
