@@ -50,19 +50,33 @@ namespace Methods
 
         static int AddUp2(int n)
         {
-            int res = 0, temp, count = 0;
+            int result = 0, doubleUp, count = 0;
 
-            temp = n * 2;
-            while(count <= temp)
+            doubleUp = n * 2;
+            while (count <= doubleUp)
             {
                 if (count % 2 == 0)
                 {
-                  // res += count;
-                    res = res + count; // is equivalent
+                    // res += count;
+                    result = result + count; // is equivalent
                 }
                 count++;
             }
-            
+
+            return result;
+
+            //return 2 * AddUp(5);
+        }
+
+        static int Times(int a, int b)
+        {
+            int res = 0;
+            while (a > 0)
+            {
+                res = res + b;
+                a = a - 1;
+            }
+
             return res;
         }
     }
