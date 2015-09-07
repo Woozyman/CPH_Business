@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace Adressebog
 {
@@ -24,11 +27,19 @@ namespace Adressebog
             p3.Name = "Michael";
             p3.State = PersonState.hungry;
 
+            Person p4 = new Person("Tue");
+            Console.WriteLine(p4.Name);
+            Console.WriteLine(p4.PersonId);
 
-            p1.SaveMe(p1);
-            p2.SaveMe(p2);
-            p3.SaveMe(p3);
             
+
+                      
+
+               
+
+
+
+
 
 
         }
