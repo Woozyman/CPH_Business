@@ -35,17 +35,18 @@ namespace Methods
             //for (int i = 0; i <= n; i++)
             //    result += i;
             //return result;
+            //==============================================================
+            //int result = 0;
+            //int counter = 0;
+            //while (counter <= n)
+            //{
+            //    result = result + counter;
+            //    counter++;
 
-            int result = 0;
-            int counter = 0;
-            while (counter <= n)
-            {
-                result = result + counter;
-                counter++;
+            //}
 
-            }
-
-            return result;
+            //return result;
+            return (n * (n + 1)) / 2;
         }
 
         static int AddUp2(int n)
