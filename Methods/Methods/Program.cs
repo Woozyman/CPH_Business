@@ -66,7 +66,7 @@ namespace Methods
 
             return result;
 
-            //return 2 * AddUp(5);
+            //return 2 * AddUp(n);
         }
 
         static int Times(int a, int b)
