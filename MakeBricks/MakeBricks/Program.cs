@@ -32,7 +32,11 @@ namespace MakeBricks
             result = (numBig * 5) + numSmall;
             Console.WriteLine("result: {0}", result);
 
-            if (goal > big * 5 + small || goal % 5 > small)
+            if ((goal > big * 5 + small || goal % 5 > small))
+            {
+                return false;
+            }
+            else if (goal == 0)
             {
                 return false;
             }
