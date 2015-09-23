@@ -14,7 +14,7 @@ namespace LilleTabel
             int num = 0;
             Console.WriteLine("Write a number: ");
             int.TryParse(Console.ReadLine(), out num);
-
+            
             Console.WriteLine();
 
             LilleTabel(num, 10);
