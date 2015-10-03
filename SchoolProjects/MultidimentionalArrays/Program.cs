@@ -7,7 +7,12 @@ using System.Threading.Tasks;
 namespace MultidimentionalArrays
 {
     class Program
-    {
+    {/// <summary>
+    /// Prints a 2D integer Array to the console.
+    /// Resizes the rows automatically to match length of integer.
+    /// Prints the sum total for every row and column.
+    /// </summary>
+    /// <param name="args"></param>
         static void Main(string[] args)
         {
            int[,] arr2D0 = new int[4, 6]
