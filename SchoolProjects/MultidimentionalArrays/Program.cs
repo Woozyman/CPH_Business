@@ -10,15 +10,7 @@ namespace MultidimentionalArrays
     {
         static void Main(string[] args)
         {
-            //int[,] arr2D0 = new int[3,5]
-            //{
-            //    {1,2,3,4000,5,},
-            //    {1,2,30000,4,5,},
-            //    {1,2,3,4,5,}
-
-            //};
-
-            int[,] arr2D0 = new int[4, 6]
+           int[,] arr2D0 = new int[4, 6]
            {
                 {1,2,3,4,5,6},
                 {1,2,3000,4,5,6},
@@ -26,10 +18,10 @@ namespace MultidimentionalArrays
                 {1,2,3,4,5,6}
            };
 
-            Print(Sum2DX(arr2D0));
-            Print(Sum2DY(arr2D0));
-            Console.WriteLine("Sum2DX Result: " + "\n" + SumArray(Sum2DX(arr2D0)));
-            Console.WriteLine("Sum2DY Result: " + "\n" + SumArray(Sum2DY(arr2D0)));
+            //Print(Sum2DX(arr2D0));
+            //Print(Sum2DY(arr2D0));
+            //Console.WriteLine("Sum2DX Result: " + "\n" + SumArray(Sum2DX(arr2D0)));
+            //Console.WriteLine("Sum2DY Result: " + "\n" + SumArray(Sum2DY(arr2D0)));
 
             Print2D(arr2D0, FindLongestElement(arr2D0));
 
@@ -185,23 +177,10 @@ namespace MultidimentionalArrays
 
         static int SumArray(int[] arr)
         {
-            // Console.WriteLine("-------------------------");
             int res = 0;
-            //int count = 0;
             for (int i = 0; i < arr.Length; i++)
             {
                 res += arr[i];
-                //if (count == 5)
-                //{
-                //    Console.WriteLine();
-                //    count = 0;
-                //}
-                //else
-                //{
-                //    Console.Write("| " + arr[i] + " ");
-                //    count++;
-                //}
-
             }
 
             return res;
