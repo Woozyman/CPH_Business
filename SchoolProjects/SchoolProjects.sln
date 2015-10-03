@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolProjects", "SchoolPro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LilleTabel", "LilleTabel\LilleTabel.csproj", "{019635D6-EFD2-4CC7-B7D8-D19C153D8533}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{21EE74C4-52DD-4F65-BA8F-97A3C7B111B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultidimentionalArrays", "MultidimentionalArrays\MultidimentionalArrays.csproj", "{2256C65D-DDB9-4B2F-B2F3-E83300E87098}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{019635D6-EFD2-4CC7-B7D8-D19C153D8533}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{019635D6-EFD2-4CC7-B7D8-D19C153D8533}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{019635D6-EFD2-4CC7-B7D8-D19C153D8533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21EE74C4-52DD-4F65-BA8F-97A3C7B111B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EE74C4-52DD-4F65-BA8F-97A3C7B111B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EE74C4-52DD-4F65-BA8F-97A3C7B111B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EE74C4-52DD-4F65-BA8F-97A3C7B111B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2256C65D-DDB9-4B2F-B2F3-E83300E87098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2256C65D-DDB9-4B2F-B2F3-E83300E87098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2256C65D-DDB9-4B2F-B2F3-E83300E87098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2256C65D-DDB9-4B2F-B2F3-E83300E87098}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
