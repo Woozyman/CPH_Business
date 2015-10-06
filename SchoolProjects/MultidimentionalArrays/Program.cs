@@ -15,47 +15,38 @@ namespace MultidimentionalArrays
     /// <param name="args"></param>
         static void Main(string[] args)
         {
-           int[,] arr2D0 = new int[4, 6]
+           int[,] arr2D0 = new int[5, 7]
            {
-                {1,2,3,4,5,6},
-                {1,2,3000,4,5,6},
-                {1,2,3,4,5,6},
-                {1,2,3,4,5,6}
+                {1,2,3,4,5,6,0},
+                {1,2,3000,4,5,6,0},
+                {1,2,3,4,5,6,0},
+                {1,2,3,4,50000,6,0},
+                {0,0,0,0,0,0,0 }
            };
 
-            //Print(Sum2DX(arr2D0));
-            //Print(Sum2DY(arr2D0));
-            //Console.WriteLine("Sum2DX Result: " + "\n" + SumArray(Sum2DX(arr2D0)));
-            //Console.WriteLine("Sum2DY Result: " + "\n" + SumArray(Sum2DY(arr2D0)));
-
+          
             Print2D(arr2D0, FindLongestElement(arr2D0));
 
+            Console.ReadLine();  
         }
 
         static int FindLongestElement(int[,] arr)
         {
             int y = arr.GetLength(0);
             int x = arr.GetLength(1);
-            int k = 0;
-            int[] res = new int[x * y];
             string resStr = "";
             for (int i = 0; i < y; i++)
             {
                 for (int j = 0; j < x; j++)
                 {
-                    res[k] += arr[i, j];
-                    k++;
+                    if (arr[i,j].ToString().Length > resStr.Length)
+                    {
+                        resStr = arr[i, j].ToString();
+                    }
+                    
                 }
             }
-
-            for (int i = 0; i < res.Length; i++)
-            {
-                if (res[i].ToString().Length > resStr.Length)
-                {
-                    resStr = res[i].ToString();
-                }
-            }
-
+                       
             return resStr.Length;
         }
 
@@ -65,10 +56,10 @@ namespace MultidimentionalArrays
 
             int y = arr.GetLength(0);
             int x = arr.GetLength(1);
-            int[] res = new int[y];
-            for (int i = 0; i < x; i++)
+            int[] res = new int[y - 1];
+            for (int i = 0; i < x-1; i++)
             {
-                for (int j = 0; j < y; j++)
+                for (int j = 0; j < y - 1; j++)
                 {
                     res[j] += arr[j, i];
                 }
@@ -86,7 +77,7 @@ namespace MultidimentionalArrays
 
             for (int i = 0; i < y; i++)
             {
-                for (int j = 0; j < x; j++)
+                for (int j = 0; j < x-1; j++)
                 {
                     res[j] += arr[i, j];
                 }
@@ -102,17 +93,20 @@ namespace MultidimentionalArrays
             int y = arr.GetLength(0);
             int x = arr.GetLength(1);
 
-            int[] resX = new int[y];
-            int[] resY = new int[x];
+            int[] resX = new int[x];
+            int[] resY = new int[y];
+            resX = Sum2DX(arr);
+           
 
             char separator = '|';
 
+
             PrintFrame(cellSpacing, x);
 
-            for (int i = 0; i < y; i++)
+            for (int i = 0; i < y - 1; i++)
             {
 
-                for (int j = 0; j < x; j++)
+                for (int j = 0; j < x - 1; j++)
                 {
 
                     if (arr[i, j].ToString().Length < cellSpacing && j != x - 1)
@@ -127,25 +121,34 @@ namespace MultidimentionalArrays
                     {
                         Console.Write(separator + arr[i, j].ToString().PadRight(cellSpacing));
                     }
-
+                      System.Threading.Thread.Sleep(100); //Print every 300mS
+                    
                 }
                 Console.Write(separator);
-                resX = Sum2DX(arr);
-                Console.Write(" " + resX[i]);
+                Console.Write(resX[i].ToString().PadRight(cellSpacing) + separator);
+
+
                 Console.WriteLine();
+                PrintFrame(cellSpacing, x);
             }
 
-            PrintFrame(cellSpacing, x);
 
             resY = Sum2DY(arr);
-            for (int i = 0; i < resY.Length; i++)
+            for (int i = 0; i < resY.Length - 1; i++)
             {
-                Console.Write(resY[i] + MakeEmptyString(cellSpacing));
+                System.Threading.Thread.Sleep(100); //Print every 300mS
+                arr[4, i] += resY[i];
+                Console.Write(separator + arr[4, i].ToString().PadRight(cellSpacing));
             }
+            Console.Write(separator + MakeEmptyString(cellSpacing +1) + separator);
             Console.WriteLine();
-
-
+            PrintFrame(cellSpacing, x);
         }
+
+       
+                              
+           
+      
 
         private static void PrintFrame(int cellSpacing, int x)
         {
@@ -161,7 +164,15 @@ namespace MultidimentionalArrays
             Console.WriteLine();
         }
 
-
+        private static void PrintRowSeparator(int cellspacing, int nElements)
+        {
+            char separatorUnder = '-';
+            for (int i = 0; i < cellspacing * nElements + cellspacing ; i++)
+            {
+                Console.Write(separatorUnder);
+            }
+            Console.WriteLine();
+        }
 
         static void Print(int[] arr)
         {
@@ -191,22 +202,17 @@ namespace MultidimentionalArrays
             return res;
         }
 
-        static string MakeEmptyString(int cellSpacing)
+        static string MakeEmptyString(int length)
         {
 
             StringBuilder emptyStr = new StringBuilder();
 
-            for (int i = 0; i < cellSpacing - 1; i++)
+            for (int i = 0; i < length - 1; i++)
             {
                 emptyStr.Append(" ");
-                //Console.WriteLine(emptyStr);
             }
 
             return emptyStr.ToString();
         }
-
-
-
-
     }
 }
