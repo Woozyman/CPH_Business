@@ -56,8 +56,8 @@ namespace MultidimentionalArrays
 
             int y = arr.GetLength(0);
             int x = arr.GetLength(1);
-            int[] res = new int[y - 1];
-            for (int i = 0; i < x-1; i++)
+            int[] res = new int[y];
+            for (int i = 0; i < x; i++)
             {
                 for (int j = 0; j < y - 1; j++)
                 {
@@ -121,22 +121,20 @@ namespace MultidimentionalArrays
                     {
                         Console.Write(separator + arr[i, j].ToString().PadRight(cellSpacing));
                     }
-                      System.Threading.Thread.Sleep(100); //Print every 300mS
+                      System.Threading.Thread.Sleep(100); //Print every 100mS
                     
                 }
                 Console.Write(separator);
-                Console.Write(resX[i].ToString().PadRight(cellSpacing) + separator);
-
-
+                Console.Write(resX[i].ToString().PadRight(cellSpacing) + separator);  // Prints Horisontal results for each row
                 Console.WriteLine();
+
                 PrintFrame(cellSpacing, x);
             }
 
-
-            resY = Sum2DY(arr);
+            resY = Sum2DY(arr); // Prints Vertical results for each column
             for (int i = 0; i < resY.Length - 1; i++)
             {
-                System.Threading.Thread.Sleep(100); //Print every 300mS
+                System.Threading.Thread.Sleep(100); //Print every 100mS
                 arr[4, i] += resY[i];
                 Console.Write(separator + arr[4, i].ToString().PadRight(cellSpacing));
             }
