@@ -173,34 +173,7 @@ namespace MultidimentionalArrays
             Console.WriteLine();
         }
 
-        static void Print(int[] arr)
-        {
-            for (int i = 0; i < arr.Length; i++)
-            {
-                Console.Write(arr[i] + " ");
-            }
-            Console.WriteLine();
-        }
-
-        static void Print(string[] arr)
-        {
-            for (int i = 0; i < arr.Length; i++)
-            {
-                Console.WriteLine(arr[i]);
-            }
-        }
-
-        static int SumArray(int[] arr)
-        {
-            int res = 0;
-            for (int i = 0; i < arr.Length; i++)
-            {
-                res += arr[i];
-            }
-
-            return res;
-        }
-
+      
         static string MakeEmptyString(int length)
         {
 
