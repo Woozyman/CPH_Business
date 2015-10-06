@@ -96,7 +96,8 @@ namespace MultidimentionalArrays
             int[] resX = new int[x];
             int[] resY = new int[y];
             resX = Sum2DX(arr);
-           
+            resY = Sum2DY(arr);
+
 
             char separator = '|';
 
@@ -131,12 +132,12 @@ namespace MultidimentionalArrays
                 PrintFrame(cellSpacing, x);
             }
 
-            resY = Sum2DY(arr); // Prints Vertical results for each column
+            // Prints Vertical results for each column
             for (int i = 0; i < resY.Length - 1; i++)
             {
                 System.Threading.Thread.Sleep(100); //Print every 100mS
-                arr[4, i] += resY[i];
-                Console.Write(separator + arr[4, i].ToString().PadRight(cellSpacing));
+                arr[y-1, i] += resY[i];
+                Console.Write(separator + arr[y-1, i].ToString().PadRight(cellSpacing));
             }
             Console.Write(separator + MakeEmptyString(cellSpacing +1) + separator);
             Console.WriteLine();
