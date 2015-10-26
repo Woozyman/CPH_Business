@@ -49,6 +49,17 @@ namespace FirstObjects
                 Console.WriteLine("p2 is older");
             }
             Console.WriteLine();
+
+            Console.WriteLine(p2.GetRoot);
+            //Console.WriteLine(p2.ToString());
+            Console.WriteLine(p2.ReturnStr);
+            p2.X = 7;
+            p2.Y = 11;
+
+            Console.WriteLine(p2.GetRoot);
+            //Console.WriteLine(p2.ToString());
+            Console.WriteLine(p2.ReturnStr);
+            Console.WriteLine(p2.GetDay);
         }
     }
 }

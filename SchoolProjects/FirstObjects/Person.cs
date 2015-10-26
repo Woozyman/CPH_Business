@@ -1,4 +1,6 @@
 ﻿using System;
+using static System.Math;
+using static System.Enum;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +11,16 @@ namespace FirstObjects
 {
     class Person
     {
+        //TODO Make a string to hold birthday after DateTime Conversion
+
+
         string fName = "Frey";
         string lName;
+        DayOfWeek presentDay { get; set; } = DateTime.Today.DayOfWeek;
         DateTime birthDay;
 
+        public double X { get; set; } = 4;
+        public double Y { get; set; } = 2;
 
         public Person() { }
         public Person(string fName)
@@ -68,5 +76,14 @@ namespace FirstObjects
                 birthDay = value.ToLocalTime();
             }
         }
+
+        public double GetRoot => Sqrt(X * Y);
+        //public new string ToString() => $"{X}, {Y}";
+        public override string ToString() => $"{X}, {Y}";
+
+        public string ReturnStr => string.Format("{0}, {1}", X, Y);
+
+        public DayOfWeek GetDay => presentDay;
+
     }
 }
