@@ -1,11 +1,5 @@
 ﻿using System;
 using static System.Math;
-using static System.Enum;
-using System.Globalization;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FirstObjects
 {

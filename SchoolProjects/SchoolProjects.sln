@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceGame", "DiceGame\DiceGame.csproj", "{E725A647-58DA-466F-8A15-259F23E14C04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farm", "Farm\Farm.csproj", "{C05ED2BD-DCB4-4AE6-A987-2898131B5A6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeFactory", "..\..\..\Visual Studio 2015\Projects\C#\Pluralsight\C_sharp Projects\ShapeFactory\ShapeFactory.csproj", "{8B7A62C3-1850-4C5A-8B4F-73682E25027B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{E725A647-58DA-466F-8A15-259F23E14C04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E725A647-58DA-466F-8A15-259F23E14C04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E725A647-58DA-466F-8A15-259F23E14C04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C05ED2BD-DCB4-4AE6-A987-2898131B5A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C05ED2BD-DCB4-4AE6-A987-2898131B5A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C05ED2BD-DCB4-4AE6-A987-2898131B5A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C05ED2BD-DCB4-4AE6-A987-2898131B5A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B7A62C3-1850-4C5A-8B4F-73682E25027B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B7A62C3-1850-4C5A-8B4F-73682E25027B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B7A62C3-1850-4C5A-8B4F-73682E25027B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B7A62C3-1850-4C5A-8B4F-73682E25027B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

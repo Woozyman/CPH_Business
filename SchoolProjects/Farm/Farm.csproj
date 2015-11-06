@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8971D521-9E55-476C-AE54-4A454DDAD058}</ProjectGuid>
+    <ProjectGuid>{C05ED2BD-DCB4-4AE6-A987-2898131B5A6B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LinkedList</RootNamespace>
-    <AssemblyName>LinkedList</AssemblyName>
+    <RootNamespace>Farm</RootNamespace>
+    <AssemblyName>Farm</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -37,8 +37,11 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="List.cs" />
-    <Compile Include="Node.cs" />
+    <Compile Include="AnimalFactory.cs" />
+    <Compile Include="Gris.cs" />
+    <Compile Include="Høne.cs" />
+    <Compile Include="IAnimal.cs" />
+    <Compile Include="Ko.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
